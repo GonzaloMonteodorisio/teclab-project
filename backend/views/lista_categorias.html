@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Categorías</title>
+    <link rel="stylesheet" href="../../css/assets/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lista de Categorías</h1>
+        </header>
+        <ul>
+            <!-- Aquí irán las categorías dinámicamente generadas -->
+            <?php
+            require_once '../clases/autoload.php';
+            $categorias = [/* Aquí se agregarían objetos de tipo Categoria */];
+            foreach ($categorias as $categoria) {
+                echo "<li>{$categoria->nombre}</li>";
+            }
+            ?>
+        </ul>
+    </div>
+</body>
+</html>

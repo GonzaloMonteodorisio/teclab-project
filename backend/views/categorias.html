@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta de Categorías</title>
+    <link rel="stylesheet" href="../../assets/css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Alta de Categorías</h1>
+        </header>
+        <form action="/backend/categorias.php" method="post">
+            <label for="nombre">Nombre de la Categoría:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            
+            <div class="form-actions">
+                <button type="submit">Guardar</button>
+                <button type="button" onclick="window.location.href='/backend/views/lista_categorias.html';">Cancelar</button>
+            </div>
+        </form>
+        <footer>
+            <p style="text-align: center;">Gonzalo Monteodorisio</p>
+        </footer>
+    </div>
+</body>
+</html>

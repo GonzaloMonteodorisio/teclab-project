@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Productos</title>
+    <link rel="stylesheet" href="../../assets/css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lista de Productos</h1>
+        </header>
+        <ul>
+            <!-- Aquí irán los productos dinámicamente generados -->
+            <?php
+            require_once '../clases/autoload.php';
+            $productos = [/* Aquí se agregarían objetos de tipo Producto */];
+            foreach ($productos as $producto) {
+                echo "<li>{$producto->nombre} - {$producto->precio}</li>";
+            }
+            ?>
+        </ul>
+    </div>
+</body>
+</html>

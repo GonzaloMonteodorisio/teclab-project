@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta de Productos</title>
+    <link rel="stylesheet" href="../../assets/css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Alta de Productos</h1>
+        </header>
+        <form action="/backend/productos.php" method="post">
+            <label for="nombre">Nombre del Producto:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+            
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" step="0.01" required>
+            
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" name="categoria_id" required>
+                <option value="1">Computadoras</option>
+                <option value="2">Accesorios</option>
+            </select>
+            
+            <div class="form-actions">
+                <button type="submit">Guardar</button>
+                <button type="button" onclick="window.location.href='/backend/views/lista_productos.html';">Cancelar</button>
+            </div>
+        </form>
+        <footer>
+            <p style="text-align: center;">Gonzalo Monteodorisio</p>
+        </footer>
+    </div>
+</body>
+</html>
