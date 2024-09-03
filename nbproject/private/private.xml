@@ -5,7 +5,6 @@
         <group>
             <file>file:/opt/lampp/htdocs/MIPROYECTO/assets/css/estilos.css</file>
             <file>file:/opt/lampp/htdocs/MIPROYECTO/backend/views/productos.html</file>
-            <file>file:/opt/lampp/htdocs/MIPROYECTO/views/home.html</file>
             <file>file:/opt/lampp/htdocs/MIPROYECTO/backend/views/lista_categorias.html</file>
             <file>file:/opt/lampp/htdocs/MIPROYECTO/backend/views/categorias.html</file>
         </group>
