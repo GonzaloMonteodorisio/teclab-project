@@ -1,12 +1,19 @@
 <?php
-require_once '../class/autoload.php';
+echo "Archivo /backend/productos.php incluido correctamente.<br><br>";
+include './class/autoload.php';
 
-$productos = [
-    new Producto(1, 'Laptop Dell', 'Laptop de alto rendimiento', 1500, 1),
-    new Producto(2, 'Mouse Logitech', 'Mouse inalámbrico', 50, 2),
-    // Agregar más productos según se necesite.
-];
+if (isset($_POST['accion']) && $_POST['accion'] === 'guardar') {
+    $miproducto = new Productos();
+    $miproducto->nombre = $_POST['nombre'];
+    $miproducto->descripcion = $_POST['descripcion'];
+    $miproducto->precio = $_POST['precio'];
+    $miproducto->categoria = $_POST['categoria'];
+    $miproducto->guardar();
+} else if (isset($_GET['add'])) {
+    include 'views/productos.html';
+    die();
+}
 
-header('Content-Type: application/json');
-echo json_encode($productos);
+$lista_pro = Productos::listar();
+include 'views/lista_productos.html';
 ?>

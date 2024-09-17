@@ -3,10 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/opt/lampp/htdocs/MIPROYECTO/assets/css/estilos.css</file>
+            <file>file:/opt/lampp/htdocs/MIPROYECTO/backend/productos.php</file>
+            <file>file:/opt/lampp/htdocs/MIPROYECTO/backend/categorias.php</file>
             <file>file:/opt/lampp/htdocs/MIPROYECTO/backend/views/productos.html</file>
-            <file>file:/opt/lampp/htdocs/MIPROYECTO/backend/views/lista_categorias.html</file>
+            <file>file:/opt/lampp/htdocs/MIPROYECTO/class/autoload.php</file>
+            <file>file:/opt/lampp/htdocs/MIPROYECTO/assets/js/validaciones.js</file>
+            <file>file:/opt/lampp/htdocs/MIPROYECTO/views/home.html</file>
+            <file>file:/opt/lampp/htdocs/MIPROYECTO/class/data_base.php</file>
+            <file>file:/opt/lampp/htdocs/MIPROYECTO/backend/views/lista_productos.html</file>
+            <file>file:/opt/lampp/htdocs/MIPROYECTO/assets/js/main.js</file>
+            <file>file:/opt/lampp/htdocs/MIPROYECTO/class/productos.php</file>
+            <file>file:/opt/lampp/htdocs/MIPROYECTO/index.php</file>
             <file>file:/opt/lampp/htdocs/MIPROYECTO/backend/views/categorias.html</file>
+            <file>file:/opt/lampp/htdocs/MIPROYECTO/backend/views/lista_categorias.html</file>
+            <file>file:/opt/lampp/htdocs/MIPROYECTO/class/categorias.php</file>
         </group>
     </open-files>
 </project-private>

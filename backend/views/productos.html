@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Alta de Productos</title>
     <link rel="stylesheet" href="../../assets/css/estilos.css">
 </head>
@@ -19,7 +20,7 @@
             <input type="text" id="nombre" name="nombre" required>
             
             <label for="categoria">Imagen:</label>
-            <input type="file" id="categoria" name="imagen" required>
+            <input type="file" id="imagen" name="imagen" required>
             
             <label for="descripcion">Descripción:</label>
             <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
@@ -30,9 +31,9 @@
             <label for="categoria">Categoría:</label>
             <input type="text" id="categoria" name="categoria" required>
             
-            <div class="form-actions">
+            <div>
                 <button type="submit">Guardar</button>
-                <button type="button" onclick="window.location.href='/backend/views/lista_productos.html';">Cancelar</button>
+                <button type="button" onclick="window.location.href='lista_productos.html';">Cancelar</button>
             </div>
         </form>
         <footer>
@@ -40,5 +41,6 @@
             <p>Imagen <a href="https://www.freepik.es/vector-gratis/plantilla-logotipo-laptop-degradado-creativo_15478128.htm#query=logo%20informatica&position=1&from_view=keyword&track=ais_hybrid&uuid=e6045c31-3ae8-4609-9902-d4afe3a5277a">Freepik</a></p>
         </footer>
     </div>
+    <script src="../../assets/js/validaciones.js"></script>
 </body>
 </html>

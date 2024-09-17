@@ -31,13 +31,17 @@ header h1 {
     font-size: 1.5rem;
 }
 
-header .logo-container {
-    background-color: #001424;
-    margin-bottom: 40px;
+/* Contenedor del logo */
+.logo-container {
+    margin-bottom: 20px;
 }
 
-header .logo {
-    width: 200px;
+/* Estilo del logo */
+.logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Estilo del formulario */

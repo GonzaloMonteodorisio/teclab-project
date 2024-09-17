@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-
-<html lang="es">
+<html>
 <head>
+    <title>Lista de productos</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Productos</title>
-    <link rel="stylesheet" href="../../assets/css/estilos.css">
+    <link rel="stylesheet" href="../assets/css/estilos.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Lista de Productos</h1>
-        </header>
-        <ul>
-            <!-- Aquí irán los productos dinámicamente generados -->
-            <?php
-            require_once '../clases/autoload.php';
-            $productos = [/* Aquí se agregarían objetos de tipo Producto */];
-            foreach ($productos as $producto) {
-                echo "<li>{$producto->nombre} - {$producto->precio}</li>";
-            }
-            ?>
-        </ul>
-    </div>
+    <center>
+        <h1 class="title">Lista de Productos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($lista_pro as $producto) { ?>
+                <tr>
+                    <td><?php echo $producto['id']; ?></td>
+                    <td><?php echo $producto['nombre']; ?></td>
+                    <td><?php echo $producto['descripcion']; ?></td>
+                    <td><?php echo $producto['precio']; ?></td>
+                    <td><?php echo $producto['categoria_id']; ?></td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+        <a href="productos.html?add">Agregar Producto</a>
+        <p>Gonzalo Monteodorisio</p>
+    </center>
 </body>
 </html>
