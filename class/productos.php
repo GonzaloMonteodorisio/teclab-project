@@ -1,6 +1,5 @@
 <?php
 /* @autor Gonzalo Monteodorisio */
-echo "Archivo /class/productos.php incluido correctamente.<br><br>";
 
 class Productos {
     public $id;
@@ -10,18 +9,22 @@ class Productos {
     public $categoria;
     private $exist = false;
 
-    function __construct($id) {
-        $db = new base_datos("mysql", "mydatabase", "127.0.0.1", "root", "chalo1234");
-        $resp = $db->select("productos", "id=?", array($id));
+    function __construct($id = null) {
+        $db = new data_base("mysql", "MIPROYECTO", "127.0.0.1", "root", "chalo1234");
+        
+        if ($id !== null) {
+            $resp = $db->select("productos", "id=?", array($id));
 
-        if (isset($resp[0]['id'])) {
-            $this->id = $resp[0]['id'];
-            $this->nombre = $resp[0]['nombre'];
-            $this->descripcion = $resp[0]['descripcion'];
-            $this->precio = $resp[0]['precio'];
-            $this->categoria = $resp[0]['categoria_id'];
-            $this->exist = true;
+            if (isset($resp[0]['id'])) {
+                $this->id = $resp[0]['id'];
+                $this->nombre = $resp[0]['nombre'];
+                $this->descripcion = $resp[0]['descripcion'];
+                $this->precio = $resp[0]['precio'];
+                $this->categoria = $resp[0]['categoria_id'];
+                $this->exist = true;
+            }
         }
+
     }
 
     public function mostrar() {
@@ -31,7 +34,7 @@ class Productos {
     }
 
     public function guardar() {
-        $db = new base_datos("mysql", "mydatabase", "127.0.0.1", "root", "chalo1234");
+        $db = new data_base("mysql", "MIPROYECTO", "127.0.0.1", "root", "chalo1234");
         if ($this->exist) {
             return $this->actualizar($db);
         } else {
@@ -40,7 +43,7 @@ class Productos {
     }
 
     public function eliminar() {
-        $db = new base_datos("mysql", "MIPROYECTO", "127.0.0.1", "root", "chalo1234");
+        $db = new data_base("mysql", "MIPROYECTO", "127.0.0.1", "root", "chalo1234");
         return $db->delete("productos", "id=?", array($this->id));
     }
     
@@ -63,7 +66,7 @@ class Productos {
     }
 
     static public function listar() {
-        $db = new base_datos("mysql", "MIPROYECTO", "127.0.0.1", "root", "chalo1234");
+        $db = new data_base("mysql", "MIPROYECTO", "127.0.0.1", "root", "chalo1234");
         return $db->select("productos");
     }
 }

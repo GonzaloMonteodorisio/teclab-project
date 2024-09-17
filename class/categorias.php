@@ -1,6 +1,5 @@
 <?php
 /* @autor Gonzalo Monteodorisio */
-echo "Archivo /class/categorias.php incluido correctamente.<br><br>";
 
 class Categorias {
     protected $id;

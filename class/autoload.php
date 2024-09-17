@@ -1,6 +1,5 @@
 <?php
 /* @autor Gonzalo Monteodorisio */
-// echo "Archivo /class/autoload.php incluido correctamente.<br><br>";
 
 class Autocarga {
     static public function cargar_clase($clase) {
