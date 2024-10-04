@@ -8,7 +8,7 @@ class Categorias {
 
     function __construct($id = null) {
         if ($id != null) {
-            $db = new data_base("mysql", "mydatabase", "127.0.0.1", "root", "chalo1234");
+            $db = new data_base("mysql", "MIPROYECTO", "127.0.0.1", "root", "chalo1234");
             $resp = $db->select("categorias", "id=?", array($id));
 
             if (isset($resp[0]['id'])) {
@@ -17,6 +17,12 @@ class Categorias {
                 $this->exist = true;
             }
         }
+    }
+    
+    public static function existe($id) {
+        $db = new data_base("mysql", "MIPROYECTO", "127.0.0.1", "root", "chalo1234");
+        $categoria = $db->select("categorias", "id = ?", array($id));
+        return !empty($categoria); // Devuelve true si la categoría existe
     }
 
     public function mostrar() {
@@ -54,6 +60,10 @@ class Categorias {
     private function actualizar() {
         $db = new data_base("mysql", "MIPROYECTO", "127.0.0.1", "root", "chalo1234");
         return $db->update("categorias", "nombre=?", "id=?", array($this->nombre, $this->id));
+    }
+    
+    public function getId() {
+        return $this->id;
     }
 
     static public function listar() {

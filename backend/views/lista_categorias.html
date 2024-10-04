@@ -4,16 +4,17 @@
     <title>Lista de categorías</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="MIPROYECTO/assets/css/estilos.css">
+    <link rel="stylesheet" href="/MIPROYECTO/assets/css/estilos.css">
 </head>
 <body>
     <center>
-        <h1 class="title">Lista de Categorias</h1>
+        <h1>Lista de Categorias</h1>
         <table>
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>NOMBRE</th>
+                    <th>ACCIONES</th> <!-- Añadir columna de acciones -->
                 </tr>
             </thead>
             <tbody>
@@ -21,6 +22,12 @@
                     <tr>
                         <td><?php echo $listaCategorias['id']; ?></td>
                         <td><?php echo $listaCategorias['nombre']; ?></td>
+                        <td>
+                            <!-- Botón de edición -->
+                            <a href="/MIPROYECTO/backend/categorias.php?edit=<?php echo $listaCategorias['id']; ?>" class="btn btn-primary">Editar</a>
+                            <!-- Botón de eliminación -->
+                            <a href="/MIPROYECTO/backend/categorias.php?delete=<?php echo $listaCategorias['id']; ?>" class="btn btn-danger" onclick="return confirm('¿Estás seguro de eliminar esta categoría?');">Eliminar</a>
+                        </td>
                     </tr>
                 <?php } ?>
             </tbody>

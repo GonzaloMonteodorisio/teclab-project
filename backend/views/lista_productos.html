@@ -17,21 +17,34 @@
                     <th>Descripción</th>
                     <th>Precio</th>
                     <th>Categoría</th>
+                    <th>Imagen</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($lista_pro as $producto) { ?>
-                <tr>
-                    <td><?php echo $producto['id']; ?></td>
-                    <td><?php echo $producto['nombre']; ?></td>
-                    <td><?php echo $producto['descripcion']; ?></td>
-                    <td><?php echo $producto['precio']; ?></td>
-                    <td><?php echo $producto['categoria_id']; ?></td>
-                </tr>
+                    <tr>
+                        <td><?php echo $producto['id']; ?></td>
+                        <td><?php echo $producto['nombre']; ?></td>
+                        <td><?php echo $producto['descripcion']; ?></td>
+                        <td><?php echo $producto['precio']; ?></td>
+                        <td><?php echo $producto['categoria_id']; ?></td>
+                        <td>
+                            <?php if ($producto['imagen']) { ?>
+                                <img src="/MIPROYECTO/assets/uploads/<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>" width="100">
+                            <?php } else { ?>
+                                No image
+                            <?php } ?>
+                        </td>
+                        <td>
+                            <a href="/MIPROYECTO/backend/productos.php?edit=<?php echo $producto['id']; ?>">Editar</a>
+                            <a href="/MIPROYECTO/backend/productos.php?delete=<?php echo $producto['id']; ?>">Eliminar</a>
+                        </td>
+                    </tr>
                 <?php } ?>
             </tbody>
         </table>
-        <a href="productos.html?add">Agregar Producto</a>
+         <a href="/MIPROYECTO/backend/productos.php?add">Agregar</a>
         <p>Gonzalo Monteodorisio</p>
     </center>
 </body>
